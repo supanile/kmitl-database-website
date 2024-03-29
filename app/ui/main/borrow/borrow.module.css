@@ -1,0 +1,103 @@
+@font-face {
+  font-family: 'Kanit';
+  src: url('font_file.woff2') format('woff2'),
+       url('font_file.woff') format('woff');
+}
+
+.container {
+  background-color: var(--bgSoft);
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 20px;
+  font-family: Kanit;
+}
+.top {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 40px;
+}
+
+.header {
+  display: flex;
+  font-size: 26px;
+  font-weight: 600;
+  color: var(--color-darkslategray);
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 40px;
+  padding-top: 40px;
+  text-decoration: underline;
+}
+
+.addButton {
+  padding: 10px;
+  background-color: #5d57c9;
+  color: var(--text);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.table {
+  width: 100%;
+}
+
+.table td {
+  padding: 20px;
+}
+
+.user {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.userImage {
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.button {
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: var(--text);
+  border: none;
+  cursor: pointer;
+}
+
+.borrow {
+  background-color: #FC7038;
+  color: white;
+}
+
+.delete {
+  background-color: crimson;
+  color: white;
+}
+
+.submit {
+  background-color: #fc7038;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 10%;
+  height: auto;
+  transition: background-color 0.2s; 
+  margin: auto;
+  margin-top: 40px;
+}
+
+.submit:hover {
+  background-color: #8a2b06;
+}
+
+.font-kanit {
+  font-family: 'Kanit', sans-serif;
+}

@@ -1,0 +1,49 @@
+@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #e3e3e3;
+  --bgSoft: white;
+  --text: black;
+  --textSoft: #black;
+
+  /* fonts */
+  --font-kanit: Kanit;
+
+  /* font sizes */
+  --font-size-5xl: 24px;
+  --font-size-sm: 14px;
+  --font-size-base: 16px;
+
+  /* Colors */
+  --color-white: #fff;
+  --color-darkgray: #a9a9a9;
+  --color-coral: #fc785d;
+  --color-gray: rgba(255, 255, 255, 0.63);
+  --color-lightgray: #cacaca;
+
+  /* Border radiuses */
+  --br-mini: 15px;
+}
+
+* {
+  margin: 0;
+  line-height: normal;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Kanit", sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+

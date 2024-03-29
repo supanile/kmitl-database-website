@@ -1,0 +1,110 @@
+.container {
+  width: 100%;
+  position: relative;
+  height: 982px;
+  overflow: hidden;
+  text-align: center;
+  font-size: 32px;
+  color: #fff;
+  font-family: Kanit;
+  top: 30%;
+  left: 35%;
+  transform: translate(-50%, -50%);
+}
+
+.bar,
+.centerBoxChild {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1512px;
+  height: 99px;
+}
+
+.centerBoxChild {
+  border-radius: 20px;
+  background-color: #fff;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.22);
+  width: 867px;
+  height: 556px;
+}
+
+.ids,
+.name,
+.numid {
+  position: absolute;
+  top: 20px;
+  left: 260px;
+  font-weight: 500;
+  display: inline-block;
+  width: 347px;
+  height: 50px;
+}
+
+.ids,
+.numid {
+  top: 70px;
+  font-weight: 300;
+}
+
+.numid {
+  top: 120px;
+}
+
+.centerBoxInner,
+.centerBoxItem,
+.rectangleDiv {
+  position: absolute;
+  top: 193px;
+  left: 42px;
+  border-radius: 10px;
+  background-color: #a19c9a;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  width: 784px;
+  height: 85px;
+}
+
+.centerBoxInner,
+.rectangleDiv {
+  top: 309px;
+}
+
+.rectangleDiv {
+  top: 425px;
+}
+
+.year,
+.fac,
+.major {
+  position: absolute;
+  top: 211px;
+  left: 77px;
+  font-weight: 500;
+  color: #fff;
+  text-align: left;
+  display: inline-block;
+  width: 200px;
+  height: 50px;
+}
+
+.fac,
+.major {
+  top: 327px;
+  width: 250px;
+}
+
+.major {
+  top: 443px;
+  width: 200px;
+}
+
+.centerBox {
+  position: absolute;
+  top: 248px;
+  left: 535px;
+  width: 867px;
+  height: 556px;
+  color: #3e3e3e;
+}
+
+

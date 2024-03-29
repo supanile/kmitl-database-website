@@ -1,0 +1,35 @@
+.container {
+  align-items: center;
+  gap: 10px;
+  background-color: #f6f6f6;
+  border-radius: 10px;
+  height: 100%;
+  width: 100%;
+  transform: translate(-8.5%, -27%);
+  position: relative;
+  z-index: 1; /* ให้มาอยู่ด้านหน้า */
+  display: flex;
+}
+
+.input {
+  background-color: transparent;
+  border: none;
+  color: var(--text);
+  outline: none;
+}
+
+.div16,
+.div17,
+.div18 {
+  line-height: 130%;
+}
+.div17 {
+  position: absolute;
+  top: 67px;
+  left: 51px;
+  color: #353535;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 40px;
+}
