@@ -67,7 +67,7 @@ export default function HistoryPage() {
           className="bg-[#F97316] text-white"
           style={{ fontFamily: "Kanit" }}
         >
-          วันที่ยืม/วันที่คืน
+          วันที่ยืม/วันที่คืนเมื่อไหร่
         </TableColumn>
         <TableColumn
           key="detail"
