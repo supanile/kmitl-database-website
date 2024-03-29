@@ -82,8 +82,7 @@ export default function BorrowPage() {
       aria-label="Example table with client side pagination"
       bottomContent={
         <div className={styles.container}>
-          <div className={styles.header}>
-          </div>
+          <div className={styles.header}></div>
           <br></br>
           <div className={styles.div15}>
             <div className={styles.item} />
