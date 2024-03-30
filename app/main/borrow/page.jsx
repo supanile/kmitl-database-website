@@ -1,6 +1,6 @@
-"use client";
+'use client'
 
-import { useCallback, useMemo, useState } from "react";
+import { useCallback, useMemo, useState, useEffect } from "react";
 import {
   Table,
   TableHeader,
@@ -14,23 +14,46 @@ import {
 } from "@nextui-org/react";
 import { users } from "@/data/data";
 
+
+async function getAsset() {
+  const respone = await fetch('http://localhost:3002/getasset');
+
+  if (!respone.ok) {
+    throw new Error('cannot fetch Asset')
+  }
+  return respone.json()
+}
 export default function BorrowPage() {
   const [filterValue, setFilterValue] = useState("");
   const [page, setPage] = useState(1);
+  const [assetState , setAssetState] = useState([])
+  const initAsset = async () => {
+    try {
+      const result = await getAsset();
+      setAssetState(result)
+      
+    } catch (error) {
+      console.log(error)
+    }
+  }
+  useEffect(()=>{
+    initAsset()
+  },[])
+
 
   const hasSearchFilter = Boolean(filterValue);
 
   const filteredItems = useMemo(() => {
-    let filteredUsers = [...users];
+    let filteredUsers = [...assetState];
 
     if (hasSearchFilter) {
-      filteredUsers = filteredUsers.filter((user) =>
-        user.assetid.toLowerCase().includes(filterValue.toLowerCase()),
+      filteredUsers = filteredUsers.filter((asset) =>
+        asset.fdAssetId.toLowerCase().includes(filterValue.toLowerCase()),
       );
     }
 
     return filteredUsers;
-  }, [users, filterValue]);
+  }, [assetState, filterValue]);
 
   const onSearchChange = useCallback((value) => {
     if (value) {
@@ -98,28 +121,28 @@ export default function BorrowPage() {
     >
       <TableHeader>
         <TableColumn
-          key="key"
+          key="fdId"
           className="bg-[#F97316] text-white"
           style={{ fontFamily: "Kanit" }}
         >
           ลำดับ
         </TableColumn>
         <TableColumn
-          key="assetid"
+          key="fdAssetId"
           className="bg-[#F97316] text-white"
           style={{ fontFamily: "Kanit" }}
         >
           เลขครุภัณฑ์ ID
         </TableColumn>
         <TableColumn
-          key="detail"
+          key="fdAssetName"
           className="bg-[#F97316] text-white"
           style={{ fontFamily: "Kanit" }}
         >
           รายละเอียด อุปกรณ์
         </TableColumn>
         <TableColumn
-          key="status"
+          key="fdStatus"
           className="bg-[#F97316] text-white"
           style={{ fontFamily: "Kanit" }}
         >
@@ -128,7 +151,7 @@ export default function BorrowPage() {
       </TableHeader>
       <TableBody emptyContent={"ไม่พบเลขครุภัณฑ์ดังกล่าว"} items={items}>
         {(item) => (
-          <TableRow key={item.name}>
+          <TableRow key={item.fdAssetId}>
             {(columnKey) => (
               <TableCell>{getKeyValue(item, columnKey)}</TableCell>
             )}
